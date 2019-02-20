@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -70,9 +70,9 @@
 
 </head>
 
-<body onload="getAPIData()">
-<div id="wrap">
-    <header>
+  <body>
+    <div id="wrap">
+      <header>
 
   <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
@@ -99,18 +99,29 @@
 
 </header>
 
-    <script src="/WhirlyGlobe/js/builds.js"></script>
-    <div class="col-sm-12 tutorial tutorial-main build-table">
-        <h2>WhirlyGlobe-Maply Builds</h2>
-        <p>Building the toolkit from scratch can be a lot of work.  Even the Cocoapods version compiles a lot of code.  If you just want a binary version, we’ve got that here.</p>
 
-<p>We also provide the results of our Jenkins continuous integration server.  Builds are run for iOS and Android nightly on the development branch and every time we check something in.</p>
+      <div class="container">
+        <div class="col-sm-12 tutorial tutorial-main">
+          <h2>Builds</h2>
+          <p>Building the toolkit from scratch can be a lot of work.  Even the Cocoapods version compiles a lot of code.  If you just want a binary version, we’ve got that here.</p>
 
-<p>If you’d like a good binary build, just grab 2.5 or a <em>nightly</em> version.  If you’ve been sent here for a specific feature, you may want the commit builds.  Those are the ones without <em>nightly</em> in the name.</p>
+<h3 id="version-26">Version 2.6</h3>
+
+<p>The official version of WhirlyGlobe-Maply is 2.6.2 for Android and 2.6.1 for iOS.  The former contains a few tweaks for Android and no changes for iOS.</p>
+
+<p>To use WhirlyGlobe-Maply via Cocoapods, include the following in your Podfile.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">pod <span class="s1">'WhirlyGlobe'</span>, :git <span class="o">=</span>&gt; <span class="s1">'https://github.com/mousebird/WhirlyGlobe'</span></code></pre></figure>
+
+<p>Unfortunately binary builds are currently broken for iOS.  Apple changed the signing paradigm for frameworks and I haven’t been able to sort it out.  Please use the submodule or Cocoapod approach.</p>
+
+<p>For Android, you can use the AAR and we discuss how in <a href="https://mousebird.github.io/WhirlyGlobe/tutorial/android/building-from-nightly.html">the Android tutorial</a>.</p>
+
+<p><a href="https://s3-us-west-1.amazonaws.com/whirlyglobemaplydistribution/WhirlyGlobe-Maply_Distribution_2_6_2.aar">Android 2.2 AAR</a></p>
 
 <h3 id="version-25">Version 2.5</h3>
 
-<p>The official released version of WhirlyGlobe-Maply is 2.5.  The downloads are as follows.</p>
+<p>This is an older version of WhirlyGlobe-Maply, provided here for compatibility.  The downloads are as follows.</p>
 
 <p><a href="https://s3-us-west-1.amazonaws.com/whirlyglobemaplydistribution/WhirlyGlobe-Maply_Distribution_2_5.zip">iOS 2.5 framework</a></p>
 
@@ -120,29 +131,14 @@
 
 <p>For Android, you can use the AAR and we discuss how in <a href="https://mousebird.github.io/WhirlyGlobe/tutorial/android/building-from-nightly.html">another tutorial</a>.</p>
 
-<h3 id="cocoapods-ios">Cocoapods (iOS)</h3>
 
-<p>Get the URL of the zip file listed below and use that in your <code class="highlighter-rouge">Podfile</code> as follows:</p>
+        </div>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">pod <span class="s1">'WhirlyGlobe'</span>, :http <span class="o">=</span>&gt; <span class="s1">'http://url/to/binary/version.zip'</span></code></pre></figure>
+      </div><!-- /.container -->
 
-<p>It’s too simple to be truth, isn’t it?</p>
-
-<p>Besides the urls listed below, you also have an special url always pointing to the lastest nightly build:</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">pod <span class="s1">'WhirlyGlobe'</span>, :http <span class="o">=</span>&gt; <span class="s1">'https://s3-us-west-1.amazonaws.com/whirlyglobemaplydistribution/iOS_daily_builds/WhirlyGlobe-Maply_Nightly_latest.zip'</span></code></pre></figure>
-
-<p><em>Note: Cocoapods caches the file downloaded using the URL as cache key, so even though this file always contains the latest nighly build, you will have to clean the cache after the first dowload. For that, check the command <code class="highlighter-rouge">pod cache clean -all</code></em></p>
-
-        <h2>Available Builds and Status</h2>
-        <div id="table">
-            <div class="container text-center">
-                <button class="btn btn-lg btn-warning"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Loading...</button>
-            </div>
-        </div>  
     </div>
-</div>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -198,7 +194,7 @@
             An open source geospatial display toolkit<br /> for iOS and Android.
           </p>
           <p class="site-description">
-            <small>Ⓒ 2017 mousebird consulting.</small>
+            <small>Ⓒ 2019 mousebird consulting.</small>
           </p>
         </div>
 
@@ -239,5 +235,5 @@
   </div>
 </footer>
 
-</body>
+  </body>
 </html>
