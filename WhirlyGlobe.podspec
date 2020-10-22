@@ -62,7 +62,7 @@ Pod::Spec.new do |s|
     mc.dependency 'FMDB'
     mc.dependency 'libjson'
     mc.dependency 'KissXML'
-    mc.dependency 'eigen'
+    mc.dependency 'eigen','3.2.10'
     mc.dependency 'proj4'
     mc.libraries = 'z', 'xml2', 'c++', 'sqlite3'
     mc.frameworks = 'CoreLocation', 'MobileCoreServices', 'SystemConfiguration', 'CFNetwork', 'UIKit', 'OpenGLES'
